@@ -6,3 +6,4 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.wo.wrap = true
 vim.wo.linebreak = true
+vim.opt.iskeyword:append("-")
