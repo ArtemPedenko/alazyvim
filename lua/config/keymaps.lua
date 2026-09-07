@@ -14,3 +14,5 @@ vim.keymap.set({ "n", "t" }, "<leader>yt", function()
 end, {
   desc = "LazyTracker",
 })
+vim.keymap.set("n", "<leader>w<", "<C-w><", { desc = "Decrease width" })
+vim.keymap.set("n", "<leader>w>", "<C-w>>", { desc = "Increase width" })
