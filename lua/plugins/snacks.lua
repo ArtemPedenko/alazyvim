@@ -26,6 +26,13 @@ return {
         confirm = { "tcd", "picker_files" },
       })
 
+      opts.picker.win = opts.picker.win or {}
+      opts.picker.win.input = opts.picker.win.input or {}
+      opts.picker.win.input.keys = vim.tbl_deep_extend("force", opts.picker.win.input.keys or {}, {
+        ["<S-Up>"] = { "history_back", mode = { "i", "n" } },
+        ["<S-Down>"] = { "history_forward", mode = { "i", "n" } },
+      })
+
       return opts
     end,
   },

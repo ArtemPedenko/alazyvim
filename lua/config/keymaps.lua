@@ -16,3 +16,5 @@ end, {
 })
 vim.keymap.set("n", "<leader>w<", "<C-w><", { desc = "Decrease width" })
 vim.keymap.set("n", "<leader>w>", "<C-w>>", { desc = "Increase width" })
+vim.keymap.set("n", "diw", '"_diw', { desc = "Delete inner word without yanking" })
+vim.keymap.set("n", "ciw", '"_ciw', { desc = "Change inner word without yanking" })
