@@ -3,7 +3,7 @@ return {
     "akinsho/bufferline.nvim",
     opts = {
       options = {
-        sort_by = "insert_after_current",
+        sort_by = "insert_at_end",
       },
     },
   },
