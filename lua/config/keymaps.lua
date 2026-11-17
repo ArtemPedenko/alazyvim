@@ -9,6 +9,9 @@ vim.keymap.set({ "n", "i", "v" }, "<D-s>", "<cmd>w<cr>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>yp", function()
   vim.fn.setreg("+", vim.fn.fnamemodify(vim.fn.expand("%:p"), ":."))
 end, { desc = "Copy relative file path" })
+vim.keymap.set("n", "<leader>yy", function()
+  vim.fn.setreg("+", "@" .. vim.fn.fnamemodify(vim.fn.expand("%:p"), ":."))
+end, { desc = "Copy relative file path with @" })
 vim.keymap.set({ "n", "t" }, "<leader>yt", function()
   Snacks.terminal.toggle("lazytracker")
 end, {
@@ -33,3 +36,10 @@ vim.keymap.set("n", "<leader>of", function()
   vim.fn.jobstart({ "open", path }, { detach = true })
 end, { desc = "Open selected folder in Finder" })
 vim.keymap.set({ "n", "x" }, "m", '"_', { desc = "black hole" })
+vim.keymap.set("n", "<leader>cS", "<cmd>%DB<cr>", {
+  desc = "Execute SQL buffer",
+})
+
+vim.keymap.set("x", "<leader>cS", ":DB<cr>", {
+  desc = "Execute selected SQL",
+})
